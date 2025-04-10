@@ -3,8 +3,8 @@ Resources:
   - TargetService:
       Type: AWS::ECS::Service
       Properties:
-        TaskDefinition: <TASK_DEFINITION>
+        TaskDefinition: !Ref task-def-number
         LoadBalancerInfo:
-          ContainerName: "wildrydes-app"
+          ContainerName: !Ref container-app-name
           ContainerPort: 80
         PlatformVersion: "LATEST"
